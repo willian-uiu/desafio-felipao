@@ -28,24 +28,31 @@ Ao final deve se exibir uma mensagem:
 */
 
 let nomeHeroi = "Will";
-let experiencia = 1001;
+let experiencia = 0;
 let elo;
 
-if(experiencia <= 1000){
-    elo = "Ferro";
-} else if (experiencia > 1000 && experiencia < 2000) {
-    elo = "Bronze";
-} else if (experiencia > 2000 && experiencia < 5000) {
-    elo = "Prata";
-} else if (experiencia > 5000 && experiencia < 7000) {
-    elo = "Ouro";
-} else if (experiencia > 7000 && experiencia < 8000) {
-    elo = "Platina";
-} else if (experiencia > 8000 && experiencia < 9000) {
-    elo = "Ascendente";
-} else if (experiencia > 9000 && experiencia < 10000) {
-    elo = "Imortal";
-} else if (experiencia > 10000) {
-    elo = "Radiante";
+// console.log(`O Herói de nome **${nomeHeroi}** está no nível de **${experiencia}XP** no elo ${elo}`)
+
+for (let i = 0; i < 50; i++) {
+    experiencia += 500;
+
+    if(experiencia <= 1000){
+        elo = "Ferro";
+    } else if (experiencia < 2000) {
+        elo = "Bronze";
+    } else if (experiencia < 5000) {
+        elo = "Prata";
+    } else if (experiencia < 7000) {
+        elo = "Ouro";
+    } else if (experiencia < 8000) {
+        elo = "Platina";
+    } else if (experiencia < 9000) {
+        elo = "Ascendente";
+    } else if (experiencia < 10000) {
+        elo = "Imortal";
+    } else {
+        elo = "Radiante";
+    }
+
+    console.log(`O Herói de nome **${nomeHeroi}** está no nível de **${experiencia}XP** no elo ${elo}`);
 }
-//    console.log(`O Herói de nome **${nomeHeroi}** está no nível de **${experiencia}**`)
